@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Une page avec un diapo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        button {
+            position: relative;
+            bottom: 250px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Une page Bootstrap avec diapo</h1>
+            <p class="lead">Sur cette page, un diapo avec du JavaScript</p>
+            <hr class="my-2">
+            <p>Pour commencer, faire cette page sans bouton</p>
+        </div>
+    </div>
+    <div class="container">
+
+       <div class="col-12 justify-content-center">
+                <img src="img/1.jpg" alt="Un coucher de soleil" id="imgDiapo2" class="img-fluid">
+                <div class="row justify-content-between">
+                    <button id="btnAvant" class="btn btn-danger my-2" onclick="diapoAvant();"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg></button>
+                    <button id="btnApres" class="btn btn-danger my-2" onclick="diapoApres();"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- mes scripts  -->
+    <script>
+     
+        //DIAPO 2 
+        document.getElementById('btnAvant').addEventListener('click', diapoAvant); 
+        function diapoAvant() { 
+            var getImage = document.getElementById('imgDiapo2').getAttribute('src')
+            switch(getImage){
+                case 'img/1.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/6.jpg'
+                    console.log(getImage);
+                    break;
+            }
+            switch(getImage){
+                case 'img/6.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/5.jpg'
+                    console.log(getImage);
+                    break;
+            }
+            switch(getImage){
+                case 'img/5.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/4.jpg'
+                    console.log(getImage);
+                    break;
+            }
+            switch(getImage){
+                case 'img/4.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/3.jpg'
+                    console.log(getImage);
+                    break;
+            }
+            switch(getImage){
+                case 'img/3.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/2.jpg'
+                    console.log(getImage);
+                    break;
+            } 
+        }
+        document.getElementById('btnApres').addEventListener('click', diapoApres); 
+        function diapoApres(){
+            var getImage = document.getElementById('imgDiapo2').getAttribute('src')
+            switch(getImage){
+                case 'img/2.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/3.jpg'
+                    console.log(getImage);
+                    break;
+            }
+            switch(getImage){
+                case 'img/3.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/4.jpg'
+                    console.log(getImage);
+                    break;
+            }
+            switch(getImage){
+                case 'img/4.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/5.jpg'
+                    console.log(getImage);
+                    break;
+            }
+            switch(getImage){
+                case 'img/5.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/6.jpg'
+                    console.log(getImage);
+                    break;
+            }
+            switch(getImage){
+                case 'img/6.jpg' : 
+                    document.getElementById('imgDiapo2').src = 'img/1.jpg'
+                    console.log(getImage);
+                    break;
+            }
+             
+        }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
